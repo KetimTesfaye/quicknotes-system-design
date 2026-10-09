@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes API Client & System Design</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>QuickNotes API Client</h1>
+        <p>Manage notes via the backend API test harness</p>
+    </header>
+
+    <main class="container">
+        <!-- Load Section -->
+        <section class="card">
+            <h2>Notes Controls</h2>
+            <button id="load-btn">Load Notes</button>
+            <p id="status" class="status-message"></p>
+        </section>
+
+        <!-- Create Section -->
+        <section class="card">
+            <h2>Create a Note</h2>
+            <form id="note-form">
+                <div class="form-control">
+                    <label for="title-input">Title (required, max 100 chars):</label>
+                    <input type="text" id="title-input" maxlength="100" placeholder="Note title...">
+                </div>
+                <div class="form-control">
+                    <label for="body-input">Body (optional):</label>
+                    <textarea id="body-input" placeholder="Note content..."></textarea>
+                </div>
+                <button type="submit" id="submit-btn">Create Note</button>
+            </form>
+        </section>
+
+        <!-- List Section -->
+        <section class="card">
+            <h2>Your Notes</h2>
+            <ul id="notes-list">
+                <li class="empty-state">No notes loaded yet. Click "Load Notes" above.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 QuickNotes Enterprise Service</p>
+    </footer>
+</body>
+</html>
